@@ -12,6 +12,8 @@ Minecraft Java **1.20.1**, Forge **47.4.10**, Java **17**. Mod independiente par
 | Sangre de Fénix | +5% tasa de regeneración natural | +50% |
 | Voluntad del Guardián | −5% duración de efectos negativos compatibles | −50% |
 
+Las cinco reliquias aparecen en la pestaña **Ingredientes** del inventario creativo y en su buscador.
+
 Clic derecho aplica un nivel y consume exactamente una unidad, también en creativo. A 10/10 conserva el objeto. Los tooltips muestran el progreso del jugador que mira el objeto, sincronizado por el servidor. Las reliquias sin consumir se guardan e intercambian libremente.
 
 ## Instalación y compilación

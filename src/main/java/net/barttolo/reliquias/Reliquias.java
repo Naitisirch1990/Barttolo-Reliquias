@@ -19,8 +19,16 @@ public final class Reliquias {
     for (var t : RelicType.values()) ITEMS.put(t, REGISTER.register(t.id, () -> new RelicItem(t)));
   }
 
+  private static void creativeContents(net.minecraftforge.event.BuildCreativeModeTabContentsEvent event) {
+    if (event.getTabKey() == net.minecraft.world.item.CreativeModeTabs.INGREDIENTS) {
+      for (var type : RelicType.values()) event.accept(ITEMS.get(type));
+    }
+  }
+
   public Reliquias() {
-    REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
+    var bus = FMLJavaModLoadingContext.get().getModEventBus();
+    REGISTER.register(bus);
+    bus.addListener(Reliquias::creativeContents);
     Network.init();
     MinecraftForge.EVENT_BUS.register(new Effects());
     MinecraftForge.EVENT_BUS.register(new Commands());
