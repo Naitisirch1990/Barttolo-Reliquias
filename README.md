@@ -22,7 +22,7 @@ Con un JDK 17 y acceso a los repositorios Maven:
 
 ```sh
 ./gradlew build
-./gradlew runGameTestServer
+./gradlew runGameTestServer -x downloadAssets
 ```
 
 GitHub Actions ejecuta compilación y GameTests con Java 17 y Gradle 8.8, y conserva el JAR y el registro como artefactos. Consultar [VALIDACION.md](docs/VALIDACION.md) para distinguir lo ejecutado de lo pendiente.
