@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "barttoloreliquias:item/piel_obsidiana"
+  }
+}
